@@ -28,16 +28,16 @@ Unsucessful Login - without Username
     I navegate to the login page    ${URL}
     I input only the password       ${PASSWORD}
     Click on the link button
-    wrong Expecting Message    Epic sadface: Username is required
+    wrong Expecting Message     Epic sadface: Username is required
 
 Unsucessful Login - only with username
     I navegate to the login page    ${URL}
     I input only the username       ${USERNAME}
     Click on the link button
-    wrong Expecting Message    Epic sadface: Password is required
+    wrong Expecting Message     Epic sadface: Password is required
 
 Unsucessful Login - Wrong credentials 
     I navegate to the login page    ${URL}
     Input wrong Credentials 
     Click on the link button 
-    wrong Expecting Message     Epic sadface: Username and password do not match any user in this service 
+    wrong Expecting Message      Epic sadface: Username and password do not match any user in this service 

@@ -4,7 +4,7 @@ Library  SeleniumLibrary
 *** Keywords ***
 
 I navegate to the login page
-     [Arguments]    ${URL}
+     [Arguments]     ${URL}
      Go to    ${URL}
 
 Input correct credentials 
