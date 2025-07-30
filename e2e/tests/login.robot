@@ -1,43 +1,41 @@
 *** Settings ***
+
 Library    SeleniumLibrary
 Resource   ../resources/login_keywords.resources.robot
-Test Setup  open browser        browser=chrome
+Suite Setup   open browser        browser=chrome
 
 *** Variables ***
 
 ${URL}       https://www.saucedemo.com/ 
-${BROWSER}   chrome
-${USERNAME}  standard_user
-${PASSWORD}  secret_sauce
 
 *** Test Cases ***
 
 sucessful Login
-    I navegate to the login page    ${URL}
-    Input correct credentials       ${USERNAME}   ${PASSWORD}
+    I navegate to the login page     ${URL}
+    Input correct credentials      
     Click on the link button   
     I am able view the home page
     
 Unsucessful Login - No credential 
-    I navegate to the login page    ${URL}
+    I navegate to the login page     ${URL}
     Input no credentials  
     Click on the link button 
-    wrong Expecting Message     Epic sadface: Username is required 
+    wrong Expecting Message noCredentials
 
 Unsucessful Login - without Username
-    I navegate to the login page    ${URL}
-    I input only the password       ${PASSWORD}
+    I navegate to the login page     ${URL}
+    I input only the password       
     Click on the link button
-    wrong Expecting Message     Epic sadface: Username is required
+    wrong Expecting Message noUserName
 
 Unsucessful Login - only with username
-    I navegate to the login page    ${URL}
-    I input only the username       ${USERNAME}
+    I navegate to the login page     ${URL}
+    I input only the username     
     Click on the link button
-    wrong Expecting Message     Epic sadface: Password is required
+    wrong Expecting Message noPassword 
 
 Unsucessful Login - Wrong credentials 
-    I navegate to the login page    ${URL}
+    I navegate to the login page     ${URL}
     Input wrong Credentials 
     Click on the link button 
-    wrong Expecting Message      Epic sadface: Username and password do not match any user in this service 
+    wrong Expecting Message wrongCredentials
