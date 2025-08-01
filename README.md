@@ -1,4 +1,8 @@
-# Robot_Automacao
+# Automação com Robot & Python
+
+![Texto alternativo](Semtítulo.png)
+
+
 Automação com Robot para o sistema SauceDemo, utilizando scripts de teste aplicando tecnicas de códico limpo. Testes implementados para os módulos Login, Dashboard , com foco em escalabilidade e manutenção fácil. O projeto demonstra boas práticas em automação de testes e estruturas reutilizáveis, garantindo eficiência e qualidade.
 
 Metódo desenvolvido para sistemas de software utilizando as melhores práticas e metodologias robustas em automação garantindo desta forma a qualidade nas entregas.
