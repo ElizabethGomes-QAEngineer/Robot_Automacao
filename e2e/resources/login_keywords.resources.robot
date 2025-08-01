@@ -6,16 +6,15 @@ variables  .././variables/variables.py
 *** Keywords ***
 
 I navegate to the login page
-     [Arguments]     ${URL}
-     Go to    ${URL}
+    Go to    ${url_Data["baseUrl"]}
 
 Input correct credentials 
-     Wait Until Element Is Visible    id=user-name  
-     Input Text     id=user-name      ${login_Data["correctData"]["username"]}
-     input Text     id=password       ${login_Data["correctData"]["password"]}
+    Wait Until Element Is Visible    id=user-name  
+    Input Text     id=user-name      ${login_Data["correctData"]["username"]}
+    input Text     id=password       ${login_Data["correctData"]["password"]}
 
 Input no credentials 
-     Wait Until Element Is Visible    id=user-name 
+    Wait Until Element Is Visible    id=user-name 
 
 Input wrong Credentials 
     Wait Until Element Is Visible    id=user-name  
@@ -46,5 +45,6 @@ Click on the link button
     Click Button    id=login-button
 
 I am able view the home page
-     ${location}     Get Location
-     Should Be Equal    ${location}    https://www.saucedemo.com/inventory.html
+    ${location}     Get Location
+    ${full_Url}     Catenate   SEPARATOR=      ${URL_Data["baseUrl"]}        ${URL_Data["inventoryUrl"]}
+    Should Be Equal    ${location}    ${full_Url}

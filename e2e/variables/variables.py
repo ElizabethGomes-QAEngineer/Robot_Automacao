@@ -1,14 +1,12 @@
 login_Data = { 
     
-           "correctData": {
-               
+           "correctData": {          
            "username":"standard_user",
            "password":"secret_sauce"
 
             } ,
 
-            "wrongData": {
-               
+            "wrongData": {        
             "username":"test",
             "password":"test123"
 
@@ -18,9 +16,18 @@ login_Data = {
 
 erro_Messages = {
     
-           "noUserName":"Epic sadface: Username is required",
+           "noUserName":"Epic sadface: Username is required", 
            "noCredentials":"Epic sadface: Username is required",
            "noPassword":"Epic sadface: Password is required",
            "wrongCredentials":"Epic sadface: Username and password do not match any user in this service"
 
           }
+
+
+url_Data = {
+
+            "baseUrl":"https://www.saucedemo.com",
+            "inventoryUrl":"/inventory.html",
+            "cartUrl":"/cart.html"
+
+}
