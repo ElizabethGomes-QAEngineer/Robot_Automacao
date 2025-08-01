@@ -9,8 +9,11 @@ Metódo desenvolvido para sistemas de software utilizando as melhores práticas 
 > **Pré-requisitos:***
 >
 > Python (v3.7 ou superior)
+> 
 > Robot Framework (última versão)
+> 
 > Drivers de Navegadores (ex.: ChromeDriver)
+> 
 > pip (Gerenciador de pacotes Python)
 
 
